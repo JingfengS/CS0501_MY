@@ -17,8 +17,6 @@ private:
     int totalBuses, totalTrucks;
     int busWaitTime, truckWaitTime;
     double busArrivalRate, truckArrivalRate;
-    double averageBusWaitTime;
-    double averageTruckWaitTime;
 public:
     simulator(double brate, double trate);
 
@@ -26,7 +24,7 @@ public:
      * Make a simulation basd on the simulate time
      * @param simulateTime the total time you want to simulate
      */
-    void simulate(int simulateTime);
+    void makeASimulate(int simulateTime);
 
     /**
      * Get the average bus wait time in last simulation
@@ -41,6 +39,11 @@ public:
      * @return average truck wait time
      */
     double getAvetageTruckWaitTime();
+
+    /**
+     * Clean records from last simulation
+     */
+    void clear();
 };
 
 
