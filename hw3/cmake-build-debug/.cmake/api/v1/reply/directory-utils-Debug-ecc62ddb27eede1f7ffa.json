@@ -8,7 +8,7 @@
 	"installers" : [],
 	"paths" : 
 	{
-		"build" : "Google_tests",
-		"source" : "Google_tests"
+		"build" : "utils",
+		"source" : "utils"
 	}
 }

@@ -308,7 +308,10 @@
 			"path" : "cmake-build-debug/_deps/googletest-src/googletest/cmake/gtest_main.pc.in"
 		},
 		{
-			"path" : "Google_tests/CMakeLists.txt"
+			"path" : "headers/CMakeLists.txt"
+		},
+		{
+			"path" : "utils/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

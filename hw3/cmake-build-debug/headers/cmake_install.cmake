@@ -1,4 +1,4 @@
-# Install script for directory: /Users/jingfengsun/Documents/data structures/hw3/Google_tests
+# Install script for directory: /Users/jingfengsun/Documents/data structures/hw3/headers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

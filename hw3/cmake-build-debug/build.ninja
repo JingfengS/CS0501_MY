@@ -41,17 +41,58 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/jingfengsun/Documents/data$ structures/hw3/cmake-build-debug/
 # =============================================================================
+# Object build statements for EXECUTABLE target google_tests
+
+
+#############################################
+# Order-only phony target for google_tests
+
+build cmake_object_order_depends_target_google_tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_simulator
+
+build CMakeFiles/google_tests.dir/testDeque.cpp.o: CXX_COMPILER__google_tests_unscanned_Debug /Users/jingfengsun/Documents/data$ structures/hw3/testDeque.cpp || cmake_object_order_depends_target_google_tests
+  DEP_FILE = CMakeFiles/google_tests.dir/testDeque.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I"/Users/jingfengsun/Documents/data structures/hw3/headers" -I"/Users/jingfengsun/Documents/data structures/hw3/utils" -isystem "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles/google_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/google_tests.dir
+
+build CMakeFiles/google_tests.dir/testSimulator.cpp.o: CXX_COMPILER__google_tests_unscanned_Debug /Users/jingfengsun/Documents/data$ structures/hw3/testSimulator.cpp || cmake_object_order_depends_target_google_tests
+  DEP_FILE = CMakeFiles/google_tests.dir/testSimulator.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I"/Users/jingfengsun/Documents/data structures/hw3/headers" -I"/Users/jingfengsun/Documents/data structures/hw3/utils" -isystem "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles/google_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/google_tests.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target google_tests
+
+
+#############################################
+# Link the executable google_tests
+
+build google_tests: CXX_EXECUTABLE_LINKER__google_tests_Debug CMakeFiles/google_tests.dir/testDeque.cpp.o CMakeFiles/google_tests.dir/testSimulator.cpp.o | utils/libsimulator.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a utils/libsimulator.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
+  LINK_LIBRARIES = utils/libsimulator.a  lib/libgtest_main.a  lib/libgtest.a
+  OBJECT_DIR = CMakeFiles/google_tests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = google_tests
+  TARGET_PDB = google_tests.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target main
 
 
 #############################################
 # Order-only phony target for main
 
-build cmake_object_order_depends_target_main: phony || CMakeFiles/main.dir
+build cmake_object_order_depends_target_main: phony || cmake_object_order_depends_target_simulator
 
 build CMakeFiles/main.dir/main.cpp.o: CXX_COMPILER__main_unscanned_Debug /Users/jingfengsun/Documents/data$ structures/hw3/main.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles/main.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I"/Users/jingfengsun/Documents/data structures/hw3/headers" -I"/Users/jingfengsun/Documents/data structures/hw3/utils"
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir
 
@@ -63,8 +104,9 @@ build CMakeFiles/main.dir/main.cpp.o: CXX_COMPILER__main_unscanned_Debug /Users/
 #############################################
 # Link the executable main
 
-build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.o
+build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.o | utils/libsimulator.a || utils/libsimulator.a
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
+  LINK_LIBRARIES = utils/libsimulator.a
   OBJECT_DIR = CMakeFiles/main.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -484,115 +526,213 @@ build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-bu
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target google_tests
+# Object build statements for STATIC_LIBRARY target deque
 
 
 #############################################
-# Order-only phony target for google_tests
+# Order-only phony target for deque
 
-build cmake_object_order_depends_target_google_tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
-
-build Google_tests/CMakeFiles/google_tests.dir/test.cpp.o: CXX_COMPILER__google_tests_unscanned_Debug /Users/jingfengsun/Documents/data$ structures/hw3/Google_tests/test.cpp || cmake_object_order_depends_target_google_tests
-  DEP_FILE = Google_tests/CMakeFiles/google_tests.dir/test.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -isystem "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/_deps/googletest-src/googletest"
-  OBJECT_DIR = Google_tests/CMakeFiles/google_tests.dir
-  OBJECT_FILE_DIR = Google_tests/CMakeFiles/google_tests.dir
+build cmake_object_order_depends_target_deque: phony || headers/CMakeFiles/deque.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target google_tests
+# Link build statements for STATIC_LIBRARY target deque
 
 
 #############################################
-# Link the executable Google_tests/google_tests
+# Link the static library headers/libdeque.a
 
-build Google_tests/google_tests: CXX_EXECUTABLE_LINKER__google_tests_Debug Google_tests/CMakeFiles/google_tests.dir/test.cpp.o | lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
-  LINK_LIBRARIES = lib/libgtest_main.a  lib/libgtest.a
-  OBJECT_DIR = Google_tests/CMakeFiles/google_tests.dir
+build headers/libdeque.a: CXX_STATIC_LIBRARY_LINKER__deque_Debug
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = headers/CMakeFiles/deque.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Google_tests/google_tests
-  TARGET_PDB = google_tests.dbg
+  TARGET_FILE = headers/libdeque.a
+  TARGET_PDB = deque.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build Google_tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/Google_tests" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+build headers/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/headers" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build Google_tests/edit_cache: phony Google_tests/CMakeFiles/edit_cache.util
+build headers/edit_cache: phony headers/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build Google_tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/Google_tests" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/jingfengsun/Documents/data structures/hw3" -B"/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug"
+build headers/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/headers" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/jingfengsun/Documents/data structures/hw3" -B"/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build Google_tests/rebuild_cache: phony Google_tests/CMakeFiles/rebuild_cache.util
+build headers/rebuild_cache: phony headers/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build Google_tests/list_install_components: phony
+build headers/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build Google_tests/CMakeFiles/install.util: CUSTOM_COMMAND Google_tests/all
-  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/Google_tests" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+build headers/CMakeFiles/install.util: CUSTOM_COMMAND headers/all
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/headers" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
 
-build Google_tests/install: phony Google_tests/CMakeFiles/install.util
+build headers/install: phony headers/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build Google_tests/CMakeFiles/install/local.util: CUSTOM_COMMAND Google_tests/all
-  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/Google_tests" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+build headers/CMakeFiles/install/local.util: CUSTOM_COMMAND headers/all
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/headers" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build Google_tests/install/local: phony Google_tests/CMakeFiles/install/local.util
+build headers/install/local: phony headers/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build Google_tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND Google_tests/all
-  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/Google_tests" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+build headers/CMakeFiles/install/strip.util: CUSTOM_COMMAND headers/all
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/headers" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build Google_tests/install/strip: phony Google_tests/CMakeFiles/install/strip.util
+build headers/install/strip: phony headers/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/jingfengsun/Documents/data structures/hw3/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target simulator
+
+
+#############################################
+# Order-only phony target for simulator
+
+build cmake_object_order_depends_target_simulator: phony || utils/CMakeFiles/simulator.dir
+
+build utils/CMakeFiles/simulator.dir/simulator.cpp.o: CXX_COMPILER__simulator_unscanned_Debug /Users/jingfengsun/Documents/data$ structures/hw3/utils/simulator.cpp || cmake_object_order_depends_target_simulator
+  DEP_FILE = utils/CMakeFiles/simulator.dir/simulator.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I"/Users/jingfengsun/Documents/data structures/hw3/headers" -I"/Users/jingfengsun/Documents/data structures/hw3/utils"
+  OBJECT_DIR = utils/CMakeFiles/simulator.dir
+  OBJECT_FILE_DIR = utils/CMakeFiles/simulator.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target simulator
+
+
+#############################################
+# Link the static library utils/libsimulator.a
+
+build utils/libsimulator.a: CXX_STATIC_LIBRARY_LINKER__simulator_Debug utils/CMakeFiles/simulator.dir/simulator.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = utils/CMakeFiles/simulator.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = utils/libsimulator.a
+  TARGET_PDB = simulator.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build utils/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/utils" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build utils/edit_cache: phony utils/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build utils/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/utils" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/jingfengsun/Documents/data structures/hw3" -B"/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build utils/rebuild_cache: phony utils/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build utils/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build utils/CMakeFiles/install.util: CUSTOM_COMMAND utils/all
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/utils" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build utils/install: phony utils/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build utils/CMakeFiles/install/local.util: CUSTOM_COMMAND utils/all
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/utils" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build utils/install/local: phony utils/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build utils/CMakeFiles/install/strip.util: CUSTOM_COMMAND utils/all
+  COMMAND = cd "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/utils" && /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build utils/install/strip: phony utils/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Target aliases.
+
+build deque: phony headers/libdeque.a
 
 build gmock: phony lib/libgmock.a
 
 build gmock_main: phony lib/libgmock_main.a
 
-build google_tests: phony Google_tests/google_tests
-
 build gtest: phony lib/libgtest.a
 
 build gtest_main: phony lib/libgtest_main.a
+
+build libdeque.a: phony headers/libdeque.a
 
 build libgmock.a: phony lib/libgmock.a
 
@@ -602,6 +742,10 @@ build libgtest.a: phony lib/libgtest.a
 
 build libgtest_main.a: phony lib/libgtest_main.a
 
+build libsimulator.a: phony utils/libsimulator.a
+
+build simulator: phony utils/libsimulator.a
+
 # =============================================================================
 # Folder targets.
 
@@ -610,14 +754,7 @@ build libgtest_main.a: phony lib/libgtest_main.a
 #############################################
 # Folder: /Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug
 
-build all: phony main _deps/googletest-build/all Google_tests/all
-
-# =============================================================================
-
-#############################################
-# Folder: /Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/Google_tests
-
-build Google_tests/all: phony Google_tests/google_tests
+build all: phony google_tests main _deps/googletest-build/all headers/all utils/all
 
 # =============================================================================
 
@@ -641,20 +778,34 @@ build _deps/googletest-build/googlemock/all: phony lib/libgmock.a lib/libgmock_m
 build _deps/googletest-build/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
+
+#############################################
+# Folder: /Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/headers
+
+build headers/all: phony headers/libdeque.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/utils
+
+build utils/all: phony utils/libsimulator.a
+
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/ExternalProject/shared_internal_commands.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FetchContent.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FetchContent/CMakeLists.cmake.in /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPython.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPython/Support.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindThreads.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/jingfengsun/Documents/data$ structures/hw3/CMakeLists.txt /Users/jingfengsun/Documents/data$ structures/hw3/Google_tests/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
+build build.ninja: RERUN_CMAKE | /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/ExternalProject/shared_internal_commands.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FetchContent.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FetchContent/CMakeLists.cmake.in /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPython.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPython/Support.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindThreads.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/jingfengsun/Documents/data$ structures/hw3/CMakeLists.txt /Users/jingfengsun/Documents/data$ structures/hw3/headers/CMakeLists.txt /Users/jingfengsun/Documents/data$ structures/hw3/utils/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/ExternalProject/shared_internal_commands.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FetchContent.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FetchContent/CMakeLists.cmake.in /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPython.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPython/Support.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindThreads.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/jingfengsun/Documents/data$ structures/hw3/CMakeLists.txt /Users/jingfengsun/Documents/data$ structures/hw3/Google_tests/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
+build /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/ExternalProject/shared_internal_commands.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FetchContent.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FetchContent/CMakeLists.cmake.in /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPython.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPython/Support.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindThreads.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/jingfengsun/Documents/data$ structures/hw3/CMakeLists.txt /Users/jingfengsun/Documents/data$ structures/hw3/headers/CMakeLists.txt /Users/jingfengsun/Documents/data$ structures/hw3/utils/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
 
 
 #############################################

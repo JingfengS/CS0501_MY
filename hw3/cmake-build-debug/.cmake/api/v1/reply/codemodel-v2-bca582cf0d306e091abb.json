@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						4
+						4,
+						5
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
@@ -21,7 +22,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						5
+						3,
+						6
 					]
 				},
 				{
@@ -47,7 +49,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-c9d1b13576e05c62db88.json",
+					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-31a54d377b384cc38fbe.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -57,14 +59,14 @@
 					"source" : "cmake-build-debug/_deps/googletest-src/googlemock",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						1,
+						2
 					]
 				},
 				{
 					"build" : "_deps/googletest-build/googletest",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-32036a79c84d5a1faf28.json",
+					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-610bb94e0d7f60534026.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -74,23 +76,38 @@
 					"source" : "cmake-build-debug/_deps/googletest-src/googletest",
 					"targetIndexes" : 
 					[
-						3,
-						4
+						4,
+						5
 					]
 				},
 				{
-					"build" : "Google_tests",
-					"jsonFile" : "directory-Google_tests-Debug-6c3cf95073452b88eb18.json",
+					"build" : "headers",
+					"jsonFile" : "directory-headers-Debug-9dcf148947487fa8c6fd.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.27"
 					},
 					"parentIndex" : 0,
-					"projectIndex" : 4,
-					"source" : "Google_tests",
+					"projectIndex" : 0,
+					"source" : "headers",
 					"targetIndexes" : 
 					[
-						2
+						0
+					]
+				},
+				{
+					"build" : "utils",
+					"jsonFile" : "directory-utils-Debug-ecc62ddb27eede1f7ffa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "utils",
+					"targetIndexes" : 
+					[
+						7
 					]
 				}
 			],
@@ -100,17 +117,21 @@
 				{
 					"childIndexes" : 
 					[
-						1,
-						4
+						1
 					],
 					"directoryIndexes" : 
 					[
-						0
+						0,
+						4,
+						5
 					],
 					"name" : "hw3",
 					"targetIndexes" : 
 					[
-						5
+						0,
+						3,
+						6,
+						7
 					]
 				},
 				{
@@ -138,8 +159,8 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						0,
-						1
+						1,
+						2
 					]
 				},
 				{
@@ -151,25 +172,20 @@
 					"parentIndex" : 2,
 					"targetIndexes" : 
 					[
-						3,
-						4
-					]
-				},
-				{
-					"directoryIndexes" : 
-					[
-						4
-					],
-					"name" : "google_test",
-					"parentIndex" : 0,
-					"targetIndexes" : 
-					[
-						2
+						4,
+						5
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 4,
+					"id" : "deque::@928fca204851a77b05e4",
+					"jsonFile" : "target-deque-Debug-fefec8d027058b3b05d7.json",
+					"name" : "deque",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock::@0f7bb11d64f3678238c7",
@@ -185,11 +201,11 @@
 					"projectIndex" : 2
 				},
 				{
-					"directoryIndex" : 4,
-					"id" : "google_tests::@eb06d550d4862b816b8d",
-					"jsonFile" : "target-google_tests-Debug-00bf69a4e34e718795c3.json",
+					"directoryIndex" : 0,
+					"id" : "google_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-google_tests-Debug-9c54d246e7592b3ef6a3.json",
 					"name" : "google_tests",
-					"projectIndex" : 4
+					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
@@ -208,8 +224,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-90f8c5762bad8c98a004.json",
+					"jsonFile" : "target-main-Debug-3a2bdc73f381217324de.json",
 					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "simulator::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-simulator-Debug-cf5e3034be4937e4b0a2.json",
+					"name" : "simulator",
 					"projectIndex" : 0
 				}
 			]

@@ -983,7 +983,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "5"
+			"value" : "6"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1748,42 +1748,6 @@
 			],
 			"type" : "STATIC",
 			"value" : "general;gmock;"
-		},
-		{
-			"name" : "google_test_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/Users/jingfengsun/Documents/data structures/hw3/cmake-build-debug/Google_tests"
-		},
-		{
-			"name" : "google_test_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "OFF"
-		},
-		{
-			"name" : "google_test_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/Users/jingfengsun/Documents/data structures/hw3/Google_tests"
 		},
 		{
 			"name" : "googletest-distribution_BINARY_DIR",
