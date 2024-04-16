@@ -232,6 +232,52 @@ public:
        }
        throw std::runtime_error("Item to delete not in the deque");
     }
+
+    /**
+     * Normally deque don't have this method
+     * but since this is the underlying data structure of ArraySet
+     * I have to write this to make conatins method in ArraySet faster
+     * @param x the element to check
+     * @return if the element in the deque
+     */
+    bool contains(T x) {
+        for (Node* p = sentinel->next; p != sentinel; p = p->next) {
+            if (p->data == x) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Write the Iterator for deque class
+     */
+    class Iterator {
+    private:
+        Node* ptr;
+    public:
+        Iterator(Node* p) : ptr(p) {}
+        Iterator operator++() {
+            ptr = ptr->next;
+            return *this;
+        }
+
+        bool operator!=(const Iterator& other) const {
+            return ptr != other.ptr;
+        }
+
+        T& operator*() const {
+            return ptr->data;
+        }
+    };
+
+    Iterator begin() const {
+        return Iterator(sentinel->next);
+    }
+
+    Iterator end() const {
+        return Iterator(sentinel);
+    }
 };
 
 #endif //DEQUE_H

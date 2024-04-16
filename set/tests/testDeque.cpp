@@ -139,3 +139,35 @@ TEST(deque, remove) {
     dq3.remove(2);
     dq3.printList();
 }
+
+TEST(deque, contains) {
+    deque<int> dq1;
+    EXPECT_FALSE(dq1.contains(0));
+
+    dq1.addLast(1);
+    EXPECT_TRUE(dq1.contains(1));
+
+    dq1.addLast(1);
+    dq1.remove(1);
+    EXPECT_TRUE(dq1.contains(1));
+
+    dq1.remove(1);
+    EXPECT_FALSE(dq1.contains(1));
+
+    for (int i = 0; i < 100; i++) {
+        dq1.addLast(i);
+    }
+    EXPECT_TRUE(dq1.contains(50));
+}
+
+TEST(deque, Iterator) {
+    deque<int> dq;
+    for (int i = 0; i < 10; i++) {
+        dq.addLast(i);
+    }
+    int i = 0;
+    for (auto j : dq) {
+       EXPECT_EQ(i, j);
+       i++;
+    }
+}
