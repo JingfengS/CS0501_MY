@@ -211,6 +211,27 @@ public:
         size--;
         return returnValue;
     }
+
+    /**
+     * Remove certain key in the deque
+     * @param x the key to remove
+     * @return the key removed
+     */
+    T remove(T x) {
+       Node* firstNode = sentinel->next;
+       for (Node* p = firstNode; p != sentinel; p = p->next) {
+           if (p->data == x) {
+               Node* previousNode = p->prev;
+               Node* nextNode = p->next;
+               previousNode->next = nextNode;
+               nextNode->prev = previousNode;
+               delete p;
+               size -= 1;
+               return x;
+           }
+       }
+       throw std::runtime_error("Item to delete not in the deque");
+    }
 };
 
 #endif //HW3_DEQUE_H

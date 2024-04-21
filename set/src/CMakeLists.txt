@@ -5,7 +5,5 @@ project(set)
 # Write find_package here
 
 
-
-
 add_subdirectory(src)
 add_subdirectory(inc)

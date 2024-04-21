@@ -124,7 +124,7 @@ CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
 CMAKE_INSTALL_MANDIR:PATH=
 
 //Path to a program.
-CMAKE_INSTALL_NAME_TOOL:FILEPATH=/usr/bin/install_name_tool
+CMAKE_INSTALL_NAME_TOOL:FILEPATH=/Users/jingfengsun/anaconda3/bin/install_name_tool
 
 //C header files for non-gcc (/usr/include)
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
@@ -381,9 +381,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/Users/jingfengsun/Documents/data structures/hw3/cm
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=27
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=28
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake
 //Path to cpack program executable.
@@ -506,7 +506,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27
+CMAKE_ROOT:INTERNAL=/Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG

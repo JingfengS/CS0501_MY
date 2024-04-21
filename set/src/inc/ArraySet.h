@@ -4,13 +4,14 @@
 
 #ifndef SET_SET_H
 #define SET_SET_H
+
 #include "Set.h"
 #include "deque.h"
 
-template <class T>
+template<class T>
 class ArraySet : public Set<T> {
 private:
-   deque<T>* arraySet;
+    deque<T> *arraySet;
 public:
     ArraySet() {
         arraySet = new deque<T>();
@@ -20,11 +21,11 @@ public:
         delete arraySet;
     }
 
-    ArraySet(const ArraySet<T>& other) {
+    ArraySet(const ArraySet<T> &other) {
         arraySet = new deque<T>(*(other.arraySet));
     }
 
-    ArraySet<T>& operator=(const ArraySet<T>& other) {
+    ArraySet<T> &operator=(const ArraySet<T> &other) {
         if (this != &other) {
             delete arraySet;
             arraySet = new deque<T>(*(other.arraySet));
@@ -52,7 +53,7 @@ public:
     }
 
     int size() const override {
-       return arraySet->getSize();
+        return arraySet->getSize();
     }
 
     bool isEmpty() const override {
@@ -69,22 +70,22 @@ public:
         arraySet->printList();
     }
 
-class Iterator {
+    class Iterator {
     private:
         typename deque<T>::Iterator it;
     public:
         Iterator(typename deque<T>::Iterator it) : it(it) {}
 
-        Iterator& operator++() {
+        Iterator &operator++() {
             ++it;
             return *this;
         }
 
-        bool operator!=(const ArraySet<T>::Iterator& other) const {
-            return it != static_cast<const Iterator&>(other).it;
+        bool operator!=(const ArraySet<T>::Iterator &other) const {
+            return it != static_cast<const Iterator &>(other).it;
         }
 
-        T& operator*() const {
+        T &operator*() const {
             return *it;
         }
     };
@@ -102,9 +103,9 @@ class Iterator {
      * @param other Another set to perform the union with.
      * @return A new set containing all elements that are in either set.
      */
-    ArraySet<T> operator+(const ArraySet<T>& other) const {
+    ArraySet<T> operator+(const ArraySet<T> &other) const {
         ArraySet<T> unionSet(*this);
-        for (auto item : other) {
+        for (auto item: other) {
             unionSet.add(item);
         }
         return unionSet;
@@ -115,9 +116,9 @@ class Iterator {
      * @param other Another set to perform the intersection with.
      * @return A new set containing all elements that are in both sets.
      */
-    ArraySet<T> operator*(const ArraySet<T>& other) const {
+    ArraySet<T> operator*(const ArraySet<T> &other) const {
         ArraySet<T> intersection;
-        for (auto item : other) {
+        for (auto item: other) {
             if (contains(item)) {
                 intersection.add(item);
             }
@@ -130,9 +131,9 @@ class Iterator {
      * @param other Another set to perform the difference with.
      * @return A new set containing all elements that are in this set but not in the other set.
      */
-    ArraySet<T> operator-(const ArraySet<T>& other) const {
+    ArraySet<T> operator-(const ArraySet<T> &other) const {
         ArraySet<T> difference(*this);
-        for (auto item : other) {
+        for (auto item: other) {
             if (difference.contains(item)) {
                 difference.remove(item);
             }

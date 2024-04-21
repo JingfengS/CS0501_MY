@@ -114,3 +114,28 @@ TEST(deque, assign) {
     EXPECT_EQ(dq3.getFirst(), 1);
     EXPECT_EQ(dq3.getLast(), 2);
 }
+
+TEST(deque, remove) {
+    deque<int> dq1;
+    deque<int> dq2;
+    deque<int> dq3;
+
+    EXPECT_THROW({dq1.remove(0);}, std::runtime_error);
+
+    dq2.addLast(0);
+    EXPECT_EQ(dq2.remove(0), 0);
+    dq2.printList();
+    EXPECT_EQ(dq2.getSize(), 0);
+
+    dq3.addLast(1);
+    dq3.addLast(0);
+    dq3.addLast(2);
+
+    dq3.remove(0);
+    EXPECT_EQ(dq3.getSize(), 2);
+    dq3.printList();
+    dq3.remove(1);
+    dq3.printList();
+    dq3.remove(2);
+    dq3.printList();
+}

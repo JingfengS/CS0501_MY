@@ -312,6 +312,9 @@ FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=OpenCV_DIR-NOTFOUND
+
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/Users/jingfengsun/Documents/data structures/set/cmake-build-debug
 
@@ -375,6 +378,15 @@ gtest_hide_internal_symbols:BOOL=OFF
 
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
+
+//The directory containing a CMake configuration file for openCV.
+openCV_DIR:PATH=openCV_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for openCv.
+openCv_DIR:PATH=openCv_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for opencv.
+opencv_DIR:PATH=opencv_DIR-NOTFOUND
 
 //Value Computed by CMake
 set_BINARY_DIR:STATIC=/Users/jingfengsun/Documents/data structures/set/cmake-build-debug/src
@@ -557,8 +569,10 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/homebrew/Cellar/opencv/4.9.0_7.reinstall][v4.9.0()]
 //Details about finding Python
-FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/opt/homebrew/Frameworks/Python.framework/Versions/3.12/bin/python3.12][cfound components: Interpreter ][v3.12.2()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/opt/homebrew/Frameworks/Python.framework/Versions/3.12/bin/python3.12][cfound components: Interpreter ][v3.12.3()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //CMAKE_INSTALL_PREFIX during last run
@@ -570,7 +584,7 @@ _Python_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=/opt/homebrew/Frameworks/Python.framework/Versions/3.12/bin/python3.12
 //Python Properties
-_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;2;64;32;;cpython-312-darwin;abi3;/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/lib/python3.12;/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/lib/python3.12;/opt/homebrew/lib/python3.12/site-packages;/opt/homebrew/lib/python3.12/site-packages
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;64;32;;cpython-312-darwin;abi3;/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/lib/python3.12;/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/lib/python3.12;/opt/homebrew/lib/python3.12/site-packages;/opt/homebrew/lib/python3.12/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=4a88e62a1732031393af8d56e6300efe
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
