@@ -45,7 +45,7 @@ public:
         if (!contains(x)) {
             throw std::runtime_error("Cannot remove item not in the set");
         }
-        arraySet->remove(x);
+        return arraySet->remove(x);
     }
 
     bool contains(T x) const override {
