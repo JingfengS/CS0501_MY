@@ -1,4 +1,0 @@
-/Users/jingfengsun/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/jingfengsun/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S "/Users/jingfengsun/Documents/data structures/stack" -B "/Users/jingfengsun/Documents/data structures/stack/cmake-build-debug"
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/jingfengsun/Documents/data structures/stack/cmake-build-debug
