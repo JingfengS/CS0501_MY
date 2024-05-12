@@ -8,7 +8,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-add_executable(google_tests testBST.cpp)
+add_executable(google_tests testBST.cpp testBSTNonRecursive.cpp)
 
 target_link_libraries(google_tests
         PRIVATE
